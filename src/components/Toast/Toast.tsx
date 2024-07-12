@@ -1,5 +1,14 @@
 import './toast.scss'
+import React from 'react';
 
-export const Toast = ({ message }: { message: string }) => {
-  return <div className="toast">{message}</div>
-}
+type ToastProps = {
+  message: string;
+};
+
+export const Toast: React.FC<ToastProps> = ({ message }) => {
+  return (
+    <div className="toast">
+      {message}
+    </div>
+  );
+};

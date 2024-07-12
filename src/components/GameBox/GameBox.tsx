@@ -353,7 +353,7 @@ export const GameBox = (props) => {
         <br />
         <button
           className="input"
-          style={{ width: '100%' }}
+          style={{ width: '100%', color: 'white', backgroundColor: 'green' }}
           type="button"
           onClick={handlePropertyTransaction}
         >

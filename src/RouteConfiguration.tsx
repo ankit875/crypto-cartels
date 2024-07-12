@@ -1,13 +1,15 @@
-import { Route, HashRouter } from 'react-router-dom'
-import { StartScreen, GameScreen } from './screens'
+import { Route, HashRouter, Routes } from "react-router-dom";
+import { StartScreen, GameScreen } from "./screens";
 
 const RouteConfiguration = () => {
   return (
     <HashRouter>
-      <Route path={'/'} Component={StartScreen} />
-      <Route path={'/game'} Component={GameScreen} />
+      <Routes>
+        <Route path={"/"} Component={StartScreen} />
+        <Route path={"/game"} Component={GameScreen} />
+      </Routes>
     </HashRouter>
-  )
-}
+  );
+};
 
-export default RouteConfiguration
+export default RouteConfiguration;

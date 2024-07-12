@@ -1,7 +1,7 @@
 export { showToast } from "./ToastUtil";
 export { Cycled } from "./Cycled";
 
-export function curry(inputFunction) {
+export function curry(inputFunction: any) {
   return function curried(...args) {
     if (args.length >= inputFunction.length) {
       return inputFunction.apply(this, args);

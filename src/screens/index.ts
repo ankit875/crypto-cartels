@@ -1,2 +1,3 @@
-export { StartScreen } from './StartScreen/StartScreen'
+import StartScreen from './StartScreen/StartScreen';
+export { StartScreen };
 export { GameScreen } from './GameScreen/GameScreen'
