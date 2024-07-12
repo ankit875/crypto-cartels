@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from 'react'
 import { BOX_TYPES, COMMUNITY_CARDS, RAILROAD_RENTS } from '../../Constants'
 import { showToast, curry } from '../../utilities'
 import { monopolyInstance } from '../../models/Monopoly'
@@ -6,7 +7,7 @@ import { ActionPopup } from './ActionPopup'
 import { GoBox, AvenueBox, SpecialBox } from './BoxTypes'
 import './gameBox.scss'
 
-export const GameBox = (props) => {
+export const GameBox = (props:any) => {
   const {
     type,
     name,
@@ -25,20 +26,20 @@ export const GameBox = (props) => {
 
   const getPropertyOwner = () => {
     return [...players].find((player) =>
-      player.ownedProperties.find((property) => property.name === name)
+      player.ownedProperties.find((property:any) => property.name === name)
     )
   }
 
   const getCurrentRentForProperty = () => {
     const currentOwner = getPropertyOwner()
     if (!currentOwner) return 0
-    const propertyDetails = currentOwner.ownedProperties.find((property) => property.name === name)
+    const propertyDetails = currentOwner.ownedProperties.find((property:any) => property.name === name)
     if (boxType.type === BOX_TYPES.AVENUE) {
       if (!propertyDetails.rentLevel) return baserent
       else return props[`rent${propertyDetails.rentLevel}`]
     } else if (boxType.type === BOX_TYPES.RAILROADS) {
       const allRailRoads = currentOwner.ownedProperties.filter(
-        (property) => property.type === BOX_TYPES.RAILROADS
+        (property:any) => property.type === BOX_TYPES.RAILROADS
       )
       if (allRailRoads.length === 1) return RAILROAD_RENTS.FIRST
       if (allRailRoads.length === 2) return RAILROAD_RENTS.SECOND
@@ -46,7 +47,7 @@ export const GameBox = (props) => {
       if (allRailRoads.length === 4) return RAILROAD_RENTS.FOURTH
     } else if (boxType.type === BOX_TYPES.UTILITIES) {
       const allUtilities = currentOwner.ownedProperties.filter(
-        (property) => property.type === BOX_TYPES.UTILITIES
+        (property:any) => property.type === BOX_TYPES.UTILITIES
       )
       if (allUtilities.length === 1) return 4 * diceValues.one * diceValues.two
       if (allUtilities.length === 2) return 10 * diceValues.one * diceValues.two
@@ -60,7 +61,7 @@ export const GameBox = (props) => {
     currentPlayer.balance -= currentRent
     currentOwner.balance += currentRent
 
-    const newPropertyData = currentOwner.ownedProperties.map((property) => {
+    const newPropertyData = currentOwner.ownedProperties.map((property:any) => {
       if (property.name === name)
         return {
           ...property,
@@ -103,7 +104,7 @@ export const GameBox = (props) => {
 
   const handlePropertyDealing = () => {
     const isPropertyOwnedByCurrentPlayer = currentPlayer.ownedProperties.find(
-      (property) => property.name === name
+      (property:any) => property.name === name
     )
     if (isPropertyOwnedByCurrentPlayer) {
       toggleCurrentTurn()
@@ -112,9 +113,9 @@ export const GameBox = (props) => {
     if (!isPropertyOwnedByCurrentPlayer) {
       const currentOwner = getPropertyOwner()
       if (currentOwner) {
-        setPlayerAction('Rent')
+        setPlayerAction('Rent' as any)
       } else {
-        setPlayerAction('Buy')
+        setPlayerAction('Buy' as any)
       }
     }
   }
@@ -124,7 +125,7 @@ export const GameBox = (props) => {
       .filter((player) => player.currentIndex === id)
       .map((player) => player)
 
-    return colors.map(({ color, name }) => (
+    return colors.map(({ color }) => (
       <div style={{ backgroundColor: color }} className="player-box"></div>
     ))
   }
@@ -136,11 +137,11 @@ export const GameBox = (props) => {
     } else return null
   }
 
-  const getRandomElementFromArray = (array) => {
+  const getRandomElementFromArray = (array:any) => {
     return array[Math.floor(Math.random() * array.length)]
   }
 
-  const chanceAction = (action) => {
+  const chanceAction = (action:any) => {
     const message = `${currentPlayer.name} - ${action}`
     showToast(message)
     chanceLog(message)
@@ -163,7 +164,7 @@ export const GameBox = (props) => {
     }
 
     if (action === 'You have been elected chairman of the board. Pay each player $50.') {
-      ;[...players].forEach((player) => {
+      [...players].forEach((player) => {
         player.balance += 50
       })
       currentPlayer.balance -= [...players].length * 50
@@ -250,7 +251,7 @@ export const GameBox = (props) => {
     }
   }
 
-  const communityAction = (action) => {
+  const communityAction = (action:any) => {
     const message = `${currentPlayer.name} - ${action}`
     showToast(message)
     communityLog(message)
@@ -309,7 +310,7 @@ export const GameBox = (props) => {
       }
 
       case COMMUNITY_CARDS.BIRTHDAY: {
-        ;[...players].forEach((player) => {
+        [...players].forEach((player) => {
           player.balance -= 10
         })
         currentPlayer.balance += [...players].length * 10
@@ -363,7 +364,7 @@ export const GameBox = (props) => {
     )
   }
 
-  const monopolyLog = (transactionType, message) =>
+  const monopolyLog = (transactionType:any, message:any) =>
     monopolyInstance.logs.push(`${transactionType} - ${message}`)
 
   const logger = curry(monopolyLog)

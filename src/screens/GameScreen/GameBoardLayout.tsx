@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react'
 import data from '../../data/gameBlocks.json'
 import { SQUARE_TYPES } from '../../Constants'
 import { GameBox } from '../../components'
@@ -20,6 +19,8 @@ export const GameBoardLayout = (props: {
   showLogs?: any
   gameStatus?: any
   currentPlayer?: any
+  toggleCurrentTurn?: any
+  removePlayerFromGame?: any
 }) => {
   const { onDiceRoll, diceValues, toggleLogs, showLogs, gameStatus, currentPlayer } = props
 

@@ -95,7 +95,8 @@ const StartScreen: React.FC = () => {
   const validateGameSettings = () => {
     if (playerDetails) {
       if (playerDetails.every((player) => player.name && player.color)) {
-        monopolyInstance.Players = playerDetails;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        monopolyInstance.Players = playerDetails as any;
         navigate('/game');
       } else {
         showToast('Please Enter All Player Details');

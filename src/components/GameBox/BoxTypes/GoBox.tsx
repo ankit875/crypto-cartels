@@ -1,7 +1,7 @@
-import React from "react";
 import "./boxTypes.scss";
 
-export const GoBox = ({ name }) => (
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const GoBox = ({ name }: { name: any }) => (
   <div className="go-box">
     <div className="box-text">
       Collect <br /> $200 Salary <br /> as you pass{" "}
