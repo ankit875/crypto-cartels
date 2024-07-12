@@ -1,0 +1,106 @@
+.start-screen {}
+
+.start-screen .game-logo,
+.game-form {
+    width: 40%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.game-logo {
+    animation-name: logoReveal;
+    animation-duration: 500ms;
+    animation-iteration-count: initial;
+}
+
+.game-form {
+    width: 60%;
+    text-align: center;
+}
+
+.start-screen .game-logo img {
+    width: 100%;
+}
+
+.input {
+    padding: 10px;
+    background: none;
+    border: 1px solid grey;
+    outline: none;
+    width: 300px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+button {
+    transition-duration: 100ms;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #00695c;
+    color: white;
+}
+
+.mar-1 {
+    margin-top: 10px;
+}
+
+.mar-2 {
+    margin-left: 10px;
+}
+
+.field-group {
+    margin-bottom: 10px;
+}
+
+.player-count-form {
+
+    width: auto;
+
+    .input-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .player-count-box {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(190, 190, 190);
+        text-align: center;
+        margin: 1%;
+        cursor: pointer;
+        transition-duration: 200ms;
+    }
+
+}
+
+.active {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.danger {
+    background-color: #c62828;
+    color: white;
+}
+
+.player-details-form {
+    margin-top: 10px;
+}
+
+@keyframes logoReveal {
+    0% {
+        opacity: 0;
+        transform: rotateZ(120deg) scale(1.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateZ(0deg) scale(1);
+    }
+}

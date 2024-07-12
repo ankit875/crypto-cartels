@@ -1,0 +1,156 @@
+div {
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.responsive {
+  background: #cde6d0;
+  width: 80vw;
+  height: 80vw;
+  margin: 10px auto;
+}
+
+.mainSquare {
+  height: 100%;
+  outline: 1px dashed #c2dec5;
+  outline-offset: -13px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.top {
+  height: 15.3%;
+}
+
+.center {
+  height: 69.3%;
+}
+
+.vertical-square {
+  outline: 1px solid black;
+  flex-grow: 1;
+  position: relative;
+}
+
+.corner-square {
+  flex-grow: 2;
+  outline: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.center-square {
+  flex-grow: 9;
+  outline: 1px solid black;
+}
+
+.side-square {
+  outline: 1px solid black;
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+.squareCorner {
+  height: 65%;
+  width: 65%;
+  border: 2px solid black;
+  right: -1px;
+  top: -1px;
+  position: absolute;
+}
+
+.firstLine {
+  position: absolute;
+  font-size: 0.7vw;
+  font-weight: 500;
+  line-height: 1vw;
+  text-align: center;
+  /* margin:0 5px; */
+}
+
+.firstLine-bottom {
+  left: 2px;
+  right: 2px;
+  top: 30%;
+}
+
+.roll-dice-1 {
+  position: absolute;
+  left: 23vw;
+  top: 1vw;
+  padding: 7px;
+  width: 10vw;
+}
+
+.game-over {
+  position: absolute;
+  left: 21vw;
+  top: 1vw;
+}
+
+.show-logs {
+  top: 50px;
+  left: 23vw;
+  padding: 7px;
+  position: absolute;
+  width: 10vw;
+}
+
+.show-logs:active,
+.roll-dice-1:active {
+  background-color: #00695c;
+  color: white;
+}
+
+.center-square-container {
+  position: absolute;
+  width: 54vw;
+}
+
+.player-turn {
+  position: relative;
+  left: calc(100%);
+  padding: 10px;
+}
+
+.player-balance {
+  font-size: 12px;
+  position: relative;
+  width: 10vw;
+  left: 10px;
+  top: 10px;
+}
+
+.player-balance-item {
+  padding: 5px;
+  margin: 5px 0px;
+}
+
+.dices {
+  position: absolute;
+  right: 0;
+}
+
+.dice-1 {
+  margin-right: 10px;
+}
+
+.logs {
+  width: 54vw;
+  height: 20vw;
+  padding: 10px;
+  position: absolute;
+  margin-top: 10vh;
+  margin-left: 5px;
+  background-color: white;
+  overflow: auto;
+
+  ul {
+    list-style-type: none;
+  }
+}
