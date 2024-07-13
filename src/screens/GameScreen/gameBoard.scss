@@ -80,11 +80,9 @@ div {
 }
 
 .roll-dice-1 {
-  position: absolute;
-  left: 23vw;
-  top: 1vw;
   padding: 7px;
   width: 10vw;
+  margin-right: 12px;
 }
 
 .game-over {
@@ -94,10 +92,7 @@ div {
 }
 
 .show-logs {
-  top: 50px;
-  left: 23vw;
   padding: 7px;
-  position: absolute;
   width: 10vw;
 }
 
@@ -110,6 +105,11 @@ div {
 .center-square-container {
   position: absolute;
   width: 54vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .player-turn {
@@ -118,22 +118,24 @@ div {
   padding: 10px;
 }
 
+.balance-wrap{
+  position: absolute;
+    left: 0;
+    top: 0;
+}
+
 .player-balance {
   font-size: 12px;
   position: relative;
   width: 10vw;
   left: 10px;
   top: 10px;
+  color:black;
 }
 
 .player-balance-item {
   padding: 5px;
   margin: 5px 0px;
-}
-
-.dices {
-  position: absolute;
-  right: 0;
 }
 
 .dice-1 {

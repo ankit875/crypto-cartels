@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import logo from '../../assets/logo.png';
-import { COLORS, GAME_SETTINGS } from '../../Constants';
-import { monopolyInstance } from '../../models/Monopoly';
-import { showToast } from '../../utilities';
-import './startScreen.scss';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import { COLORS, GAME_SETTINGS } from "../../Constants";
+import { monopolyInstance } from "../../models/Monopoly";
+import { showToast } from "../../utilities";
+import "./startScreen.scss";
 
 interface Player {
   name: string;
@@ -17,7 +17,11 @@ const StartScreen: React.FC = () => {
   const [playerCount, setPlayerCount] = useState<number>(2);
   const [playerDetails, setPlayerDetails] = useState<Player[]>([]);
 
-  const onPlayerDataChange = (property: string, value: string, playerIndex: number) => {
+  const onPlayerDataChange = (
+    property: string,
+    value: string,
+    playerIndex: number
+  ) => {
     const updatedPlayerDetails = playerDetails.map((player, index) => {
       if (index === playerIndex) return { ...player, [property]: value };
       else return player;
@@ -36,14 +40,14 @@ const StartScreen: React.FC = () => {
       setCountValidated(true);
       setPlayerDetails(getInitialPlayersData());
     } else {
-      showToast('Enter Player Count Greater Than 2');
+      showToast("Enter Player Count Greater Than 2");
     }
   };
 
   const getInitialPlayersData = (): Player[] => {
     const data: Player[] = [];
     for (let i = 0; i < playerCount; i += 1) {
-      data.push({ name: '', color: COLORS[i] });
+      data.push({ name: "", color: COLORS[i] });
     }
     return data;
   };
@@ -56,12 +60,16 @@ const StartScreen: React.FC = () => {
           <input
             className="input"
             placeholder="Enter Player Name"
-            onChange={(event) => onPlayerDataChange('name', event.target.value, i)}
-            value={playerDetails[i]?.name || ''}
+            onChange={(event) =>
+              onPlayerDataChange("name", event.target.value, i)
+            }
+            value={playerDetails[i]?.name || ""}
           />
           <select
             className="input mar-2"
-            onChange={(event) => onPlayerDataChange('color', event.target.value, i)}
+            onChange={(event) =>
+              onPlayerDataChange("color", event.target.value, i)
+            }
             value={playerDetails[i] ? playerDetails[i].color : COLORS[i]}
           >
             {COLORS.map((value) => (
@@ -78,11 +86,15 @@ const StartScreen: React.FC = () => {
 
   const getNumberOfPlayersInputBoxes = () => {
     const inputBoxes = [];
-    for (let i = GAME_SETTINGS.MIN_PLAYERS; i <= GAME_SETTINGS.MAX_PLAYERS; i++) {
+    for (
+      let i = GAME_SETTINGS.MIN_PLAYERS;
+      i <= GAME_SETTINGS.MAX_PLAYERS;
+      i++
+    ) {
       inputBoxes.push(
         <div
           key={i}
-          className={`player-count-box ${i === playerCount ? 'active' : ''}`}
+          className={`player-count-box ${i === playerCount ? "active" : ""}`}
           onClick={() => onPlayerCountInputChange(i)}
         >
           {i}
@@ -97,12 +109,12 @@ const StartScreen: React.FC = () => {
       if (playerDetails.every((player) => player.name && player.color)) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         monopolyInstance.Players = playerDetails as any;
-        navigate('/game');
+        navigate("/game");
       } else {
-        showToast('Please Enter All Player Details');
+        showToast("Please Enter All Player Details");
       }
     } else {
-      showToast('Please Enter Player Details');
+      showToast("Please Enter Player Details");
     }
   };
 
@@ -117,20 +129,23 @@ const StartScreen: React.FC = () => {
             <label htmlFor="PlayerCount">Enter Player Details</label>
             <div className="player-details-form">
               {getPlayerFormFields()}
-              <button
-                type="button"
-                className="input mar-1 active"
-                onClick={validateGameSettings}
-              >
-                Start Game
-              </button>
-              <button
-                type="button"
-                className="input mar-2 danger"
-                onClick={() => setCountValidated(false)}
-              >
-                Cancel
-              </button>
+              <div className="player-details-form-actions">
+                <button
+                  type="button"
+                  className="input danger"
+                  onClick={() => setCountValidated(false)}
+                >
+                  Cancel
+                </button>
+
+                <button
+                  type="button"
+                  className="input active"
+                  onClick={validateGameSettings}
+                >
+                  Start Game
+                </button>
+              </div>
             </div>
           </>
         ) : (
@@ -139,7 +154,9 @@ const StartScreen: React.FC = () => {
               <label htmlFor="PlayerCount" className="player-count-label">
                 Select Number of Players
               </label>
-              <div className="input-wrapper">{getNumberOfPlayersInputBoxes()}</div>
+              <div className="input-wrapper">
+                {getNumberOfPlayersInputBoxes()}
+              </div>
             </div>
           </>
         )}
