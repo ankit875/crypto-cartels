@@ -1,4 +1,6 @@
-.start-screen {}
+.start-screen {
+    color: white;
+}
 
 .start-screen .game-logo,
 .game-form {
@@ -52,6 +54,7 @@ button:active {
 
 .field-group {
     margin-bottom: 10px;
+    display: flex;
 }
 
 .player-count-form {
@@ -93,6 +96,10 @@ button:active {
     margin-top: 10px;
 }
 
+.player-details-form-actions{
+    display: flex;
+    gap: 10px;
+}
 @keyframes logoReveal {
     0% {
         opacity: 0;
