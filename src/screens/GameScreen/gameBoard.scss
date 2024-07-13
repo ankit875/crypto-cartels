@@ -108,8 +108,9 @@ div {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  padding: 2rem;
 }
 
 .player-turn {
@@ -143,17 +144,51 @@ div {
 }
 
 .logs {
-  width: 54vw;
-  height: 20vw;
+  min-height: 20vw;
+  max-height: 45vw;
   padding: 10px;
   position: absolute;
   margin-top: 10vh;
-  margin-left: 5px;
   background-color: white;
   overflow: auto;
   color: black;
+  top: 40px;
+  left: 0;
+  right: 10px;
+  animation: topToBottom 300ms both ease;
 
   ul {
     list-style-type: none;
   }
+}
+.close-logs-btn{
+  color: black;
+  background-color: transparent;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  line-height: 1;
+
+  &:focus , &:active{
+    outline: none;
+    background-color: transparent;
+    color: black;
+  }
+
+}
+
+@keyframes topToBottom {
+
+  0%{
+    transform: scale(0);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+  
 }
