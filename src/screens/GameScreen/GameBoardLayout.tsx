@@ -211,13 +211,16 @@ export const GameBoardLayout = (props: {
             {showLogs && (
               <div className="logs">
                 <ul>
+                  <button className="close-logs-btn" onClick={toggleLogs}>
+                    ✗
+                  </button>
                   {monopolyInstance.logs.map((log) => (
                     <li>{log}</li>
                   ))}
                 </ul>
               </div>
             )}
-            <div>
+            <div style={{ marginTop: "3rem" }}>
               {gameStatus ? (
                 <button
                   type="button"
