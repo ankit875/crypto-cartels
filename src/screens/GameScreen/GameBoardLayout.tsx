@@ -220,7 +220,7 @@ export const GameBoardLayout = (props: {
                 </ul>
               </div>
             )}
-            <div>
+            <div style={{ marginTop: "3rem" }}>
               {gameStatus ? (
                 <button
                   type="button"
