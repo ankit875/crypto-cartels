@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.wallet-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
