@@ -79,12 +79,16 @@ div {
   top: 30%;
 }
 
-.roll-dice-1 {
+.dices{
   position: absolute;
-  left: 23vw;
-  top: 1vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.roll-dice-1 {
   padding: 7px;
-  width: 10vw;
+  width: 15vw;
+  margin-right: 12px;
 }
 
 .game-over {
@@ -94,11 +98,8 @@ div {
 }
 
 .show-logs {
-  top: 50px;
-  left: 23vw;
   padding: 7px;
-  position: absolute;
-  width: 10vw;
+  width: 15vw;
 }
 
 .show-logs:active,
@@ -110,6 +111,12 @@ div {
 .center-square-container {
   position: absolute;
   width: 54vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 2rem;
 }
 
 .player-turn {
@@ -118,12 +125,19 @@ div {
   padding: 10px;
 }
 
+.balance-wrap{
+  position: absolute;
+    left: 0;
+    top: 0;
+}
+
 .player-balance {
   font-size: 12px;
   position: relative;
   width: 10vw;
   left: 10px;
   top: 10px;
+  color:black;
 }
 
 .player-balance-item {
@@ -131,27 +145,56 @@ div {
   margin: 5px 0px;
 }
 
-.dices {
-  position: absolute;
-  right: 0;
-}
-
 .dice-1 {
   margin-right: 10px;
 }
 
 .logs {
-  width: 54vw;
-  height: 20vw;
+  min-height: 20vw;
+  max-height: 45vw;
   padding: 10px;
   position: absolute;
   margin-top: 10vh;
-  margin-left: 5px;
   background-color: white;
   overflow: auto;
   color: black;
+  top: 40px;
+  left: 0;
+  right: 15px;
+  animation: topToBottom 300ms both ease;
 
   ul {
     list-style-type: none;
   }
+}
+.close-logs-btn{
+  color: black;
+  background-color: transparent;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  line-height: 1;
+
+  &:focus , &:active{
+    outline: none;
+    background-color: transparent;
+    color: black;
+  }
+
+}
+
+@keyframes topToBottom {
+
+  0%{
+    transform: scale(0);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+  
 }
