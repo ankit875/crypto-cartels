@@ -13,7 +13,7 @@
     "rent5": ""
   },
   {
-    "name": "Safe Avenue",
+    "name": "Safe",
     "pricetext": "$60",
     "color": "#8B4513",
     "price": 60,
@@ -40,7 +40,7 @@
     "rent5": ""
   },
   {
-    "name": "Circle Avenue",
+    "name": "Circle",
     "pricetext": "$60",
     "color": "#8B4513",
     "price": 60,
@@ -67,7 +67,7 @@
     "rent5": ""
   },
   {
-    "name": "Reading Railroad",
+    "name": "Hyperlane Railroad",
     "pricetext": "$200",
     "color": "#FFFFFF",
     "price": 200,
@@ -80,7 +80,7 @@
     "rent5": ""
   },
   {
-    "name": "Hyperlane Avenue",
+    "name": "Hyperlane",
     "pricetext": "$100",
     "color": "#87CEEB",
     "price": 100,
@@ -107,7 +107,7 @@
     "rent5": ""
   },
   {
-    "name": "Nethermind Avenue",
+    "name": "Nethermind",
     "pricetext": "$100",
     "color": "#87CEEB",
     "price": 100,
@@ -121,7 +121,7 @@
     "imageName": "Nethermind.png"
   },
   {
-    "name": "Zircuit Avenue",
+    "name": "Zircuit",
     "pricetext": "$120",
     "color": "#87CEEB",
     "price": 120,
@@ -175,7 +175,7 @@
     "rent5": ""
   },
   {
-    "name": "Web3Auth Avenue",
+    "name": "Web3Auth",
     "pricetext": "$140",
     "color": "#FF0080",
     "price": 140,
@@ -189,7 +189,7 @@
     "imageName": "Web3Auth.jpeg"
   },
   {
-    "name": "Avail Avenue",
+    "name": "Avail",
     "pricetext": "$160",
     "color": "#FF0080",
     "price": 160,
@@ -203,7 +203,7 @@
     "imageName": "Avail.png"
   },
   {
-    "name": "Pennsylvania Railroad",
+    "name": "Avail Railroad",
     "pricetext": "$200",
     "color": "#FFFFFF",
     "price": 200,
@@ -243,7 +243,7 @@
     "rent5": ""
   },
   {
-    "name": "PancakeSwap Avenue",
+    "name": "PancakeSwap",
     "pricetext": "$180",
     "color": "#FFA500",
     "price": 180,
@@ -257,7 +257,7 @@
     "imageName": "Pancake_swap.png"
   },
   {
-    "name": "Chronicle Avenue",
+    "name": "Chronicle",
     "pricetext": "$200",
     "color": "#FFA500",
     "price": 200,
@@ -284,7 +284,7 @@
     "rent5": ""
   },
   {
-    "name": "1inch Avenue",
+    "name": "1inch",
     "pricetext": "$220",
     "color": "#FF0000",
     "price": 220,
@@ -311,7 +311,7 @@
     "rent5": ""
   },
   {
-    "name": "Blockscout Avenue",
+    "name": "Blockscout",
     "pricetext": "$220",
     "color": "#FF0000",
     "price": 220,
@@ -325,7 +325,7 @@
     "imageName": "Blockscout.jpg"
   },
   {
-    "name": "Arbitrum Avenue",
+    "name": "Arbitrum",
     "pricetext": "$240",
     "color": "#FF0000",
     "price": 240,
@@ -339,7 +339,7 @@
     "imageName": "Arbitrum.png"
   },
   {
-    "name": "B&O Railroad",
+    "name": "Arbitrum Railraod",
     "pricetext": "$200",
     "color": "#FFFFFF",
     "price": 200,
@@ -352,7 +352,7 @@
     "rent5": ""
   },
   {
-    "name": "Flare Avenue",
+    "name": "Flare",
     "pricetext": "$260",
     "color": "#FFFF00",
     "price": 260,
@@ -366,7 +366,7 @@
     "imageName": "Flare.png"
   },
   {
-    "name": "Uniswap Avenue",
+    "name": "Uniswap",
     "pricetext": "$260",
     "color": "#FFFF00",
     "price": 260,
@@ -420,7 +420,7 @@
     "rent5": ""
   },
   {
-    "name": "Filecoin Avenue",
+    "name": "Filecoin",
     "pricetext": "$300",
     "color": "#008000",
     "price": 300,
@@ -434,7 +434,7 @@
     "imageName": "Filecoin.png"
   },
   {
-    "name": "LayerZero Avenue",
+    "name": "LayerZero",
     "pricetext": "$300",
     "color": "#008000",
     "price": 300,
@@ -461,7 +461,7 @@
     "rent5": ""
   },
   {
-    "name": "Worldcoin Avenue",
+    "name": "Worldcoin",
     "pricetext": "$320",
     "color": "#008000",
     "price": 320,

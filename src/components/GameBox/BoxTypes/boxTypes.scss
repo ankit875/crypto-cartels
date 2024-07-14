@@ -52,7 +52,7 @@
     }
 
     .box-text {
-        font-size: 0.6vw;
+        font-size: 2.6vw;
         line-height: 12px;
         position: absolute;
         text-align: center;
@@ -60,13 +60,15 @@
         width: 100%;
         margin-top: 10px;
         font-size: 12px;
-        bottom: 12px;
+        bottom: 30px;
+        font-weight: bold;
     }
 
     .box-price {
         text-align: center;
         font-size: 10px;
         padding-bottom: 4px;
+        font-weight: bold;
     }
 }
 
@@ -77,9 +79,9 @@
     .box-text {
 
         font-size: 10px;
-        padding: 10px;
+        // padding: 10px;
         text-align: center;
-
+        font-weight: bold;
     }
 
     .box-image {

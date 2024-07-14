@@ -21,7 +21,7 @@ const StartScreen: React.FC = () => {
   const [countValidated, setCountValidated] = useState(false)
   const [playerCount, setPlayerCount] = useState<number>(2)
   const [playerDetails, setPlayerDetails] = useState<Player[]>([])
-  const { data: sendHash, sendTransaction } = useSendTransaction()
+  const { sendTransaction } = useSendTransaction()
 
   const onPlayerDataChange = (property: string, value: string, playerIndex: number) => {
     const updatedPlayerDetails = playerDetails.map((player, index) => {

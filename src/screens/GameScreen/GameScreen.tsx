@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GameBoardLayout } from './GameBoardLayout'
 import { monopolyInstance } from '../../models/Monopoly'
@@ -24,6 +24,7 @@ export const GameScreen = () => {
 
   useEffect(() => {
     if (!monopolyInstance.Players.current) navigate('/')
+      console.log('Address', refresh)
   }, [navigate])
 
   const rollDice = () => {

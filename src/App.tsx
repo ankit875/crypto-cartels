@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { WagmiProvider } from 'wagmi'
 // import { arbitrum, mainnet, sepolia } from 'wagmi/chains'
 import { config } from './config'
-import { WalletOptions } from './components/WalletOptions'
+// import { WalletOptions } from './components/WalletOptions'
 import { ConnectWallet } from './components/ConnectWallet'
 // import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
