@@ -37,7 +37,7 @@ export const GameBoardLayout = (props: {
 
   const getGameRightSide = () => data.slice(31, 40);
 
-  const getGameTopSide = () => data.slice(20, 31);
+  const getGameTopSide = () => data.slice(20, 31).reverse();
 
   const getBoxType = (
     boxElement:
