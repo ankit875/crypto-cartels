@@ -26,7 +26,7 @@ export const AvenueBox = ({
       <div className={getOrientation()}>
         <div className="box-color" style={{ backgroundColor: color }}></div>
         <br />
-        <img src={path.replace("Die_1.png",imageName)} width={20} height={20} />
+        <img src={path.replace("Die_1.png",imageName)} width={24} height={24} />
         <div className="box-text">
           {name} <br />
         </div>

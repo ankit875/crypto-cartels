@@ -7,7 +7,7 @@ export function Account() {
   const { data: ensAvatar } = useEnsAvatar({ name: ensName! })
 
   return (
-    <div>
+    <div style={{display:'flex', justifyContent:'center',alignItems:'center'}}>
       {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
       {address && <div>{ensName ? `${ensName} (${address})` : address}</div>}
       <button onClick={() => disconnect()}>Disconnect</button>
